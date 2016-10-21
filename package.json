@@ -1,0 +1,47 @@
+{
+  "name": "angular-2-webpack-experiment",
+  "version": "0.0.1",
+  "description": "A starter kit for Angular 2 using webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV='development' HOST='localhost' PORT=8080 node devServer",
+    "test": "tape test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blaqbern/angular-2-webpack-experiment.git"
+  },
+  "keywords": [
+    "Angular2",
+    "webpack"
+  ],
+  "author": "Chris Blackburn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blaqbern/angular-2-webpack-experiment/issues"
+  },
+  "homepage": "https://github.com/blaqbern/angular-2-webpack-experiment#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^2.2.4",
+    "express": "^4.14.0",
+    "raw-loader": "^0.5.1",
+    "tslint": "^3.15.1",
+    "tslint-loader": "^2.1.5",
+    "typescript": "^2.0.3",
+    "webpack": "~2.1.0-beta.25",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-dev-server": "^2.1.0-beta.9"
+  },
+  "dependencies": {
+    "@angular/common": "^2.1.0",
+    "@angular/compiler": "^2.1.0",
+    "@angular/core": "^2.1.0",
+    "@angular/platform-browser": "^2.1.0",
+    "@angular/platform-browser-dynamic": "^2.1.0",
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.45",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.26"
+  }
+}
