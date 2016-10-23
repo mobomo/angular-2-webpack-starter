@@ -12,7 +12,6 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 app.use(webpackDevMiddleware(
   webpack(webpackConfig), {
     noInfo: true,
-    publicPath: webpackConfig.output.publicPath,
     // historyApiFallback: true,
     // hot: true,
     stats: {
