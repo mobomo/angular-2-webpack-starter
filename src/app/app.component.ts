@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app',
+  selector: 'mbo-app',
   template: require('./app.template'),
-  styles: [
-    require('../assets/shared-styles'),
-    require('./app.styles'),
-  ],
+  styles: [require('../assets/shared-styles/font-declarations')],
 })
-export class App {
-  public neptuneGif = require('../assets/images/neptune.gif');
-}
+export class App {}
