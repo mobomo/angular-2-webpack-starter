@@ -5,8 +5,8 @@ function getPlugins(environment) {
   const base = [
     new DefinePlugin({
       __DEV__: environment === 'development',
-      __PRODUCTION__: environment === 'production',
-      __TEST__: environment === 'test',
+      __PROD__: environment === 'production',
+      __TEST__: JSON.stringify(process.env.TEST || false),
     }),
     new ContextReplacementPlugin(
       /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
