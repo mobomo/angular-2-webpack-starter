@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV='development' HOST='localhost' PORT=8080 node devServer",
+    "prebuild": "rimraf ./dist",
+    "build": "NODE_ENV='production' webpack",
     "test": "tape test/index.js"
   },
   "repository": {

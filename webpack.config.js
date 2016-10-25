@@ -1,10 +1,20 @@
 const path = require('path');
-const { root } = require('./webpack/utils');
+const { root, getNodeDependencies } = require('./webpack/utils');
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
-  entry: root('src', 'main'),
-  output: { path: root('dist'), filename: 'bundle.js' },
+  devtool: process.env.NODE_ENV === 'production' ? 'cheap-module-source-map' : 'eval',
+  entry: {
+    app: root('src', 'main'),
+    vendor: getNodeDependencies([
+      /^\@angular\//,
+      /^core\-js/
+    ]),
+  },
+  output: {
+    path: root('dist'),
+    filename: '[name].bundle.js',
+    publicPath: '/dist/',
+  },
   resolve: { extensions: ['.ts', '.js', '.json', '.html', '.css'] },
   module: { rules: require('./webpack/loaders') },
   plugins: require('./webpack/plugins'),
