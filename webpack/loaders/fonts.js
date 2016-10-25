@@ -1,4 +1,4 @@
-const { root } = require('../constants');
+const { root } = require('../utils');
 
 module.exports = [
   {

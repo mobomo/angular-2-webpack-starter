@@ -1,5 +1,5 @@
 const path = require('path');
-const { root } = require('./webpack/constants');
+const { root } = require('./webpack/utils');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
